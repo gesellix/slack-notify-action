@@ -1,4 +1,4 @@
-name: 'Slack Notify Action'
+name: 'Slack Web API Notification'
 description: 'Send Notifications to Slack via Web API'
 author: 'Tobias Gesellchen'
 inputs:
