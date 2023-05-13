@@ -1,8 +1,8 @@
 {
-  "name": "typescript-action",
+  "name": "slack-notify-action",
   "version": "0.0.0",
   "private": true,
-  "description": "TypeScript template action",
+  "description": "Send Notifications to Slack",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -15,17 +15,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/gesellix/slack-notify-action.git"
   },
   "keywords": [
     "actions",
     "node",
-    "setup"
+    "setup",
+    "slack",
+    "notify",
+    "notification",
+    "github",
+    "workflow"
   ],
-  "author": "",
+  "author": "Tobias Gesellchen",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.10.0"
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@slack/types": "^2.8.0",
+    "@slack/web-api": "^6.8.1"
   },
   "devDependencies": {
     "@types/node": "^20.1.4",
