@@ -1,6 +1,6 @@
 # Slack Notify Action
 
-Send Notifications to Slack in a GitHub Workflow
+Send Notifications to Slack from a GitHub Workflow
 
 ![Build](https://img.shields.io/github/workflow/status/gesellix/slack-notify-action/Build?label=build)
 ![Test](https://img.shields.io/github/workflow/status/gesellix/slack-notify-action/Tests?label=test)
@@ -24,6 +24,7 @@ Send Notifications to Slack in a GitHub Workflow
 
 ## Feature
 
+- Uses Slack's [Web API](https://api.slack.com/web) instead of an [Incoming Webhook](https://api.slack.com/messaging/webhooks)
 - Notify the result of GitHub Actions
 - Support three job status (reference: [job-context](https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions#job-context))
     - success
