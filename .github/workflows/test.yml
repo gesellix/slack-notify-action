@@ -23,6 +23,5 @@ jobs:
         with:
           type: success
           job_name: _test-job_
-          url: http://localhost/_test-url_
           slack_token: _test-token_
           channel: _test-channel_
