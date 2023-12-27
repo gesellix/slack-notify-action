@@ -6,8 +6,8 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
-    "format": "prettier --write '**/*.ts'",
-    "format-check": "prettier --check '**/*.ts'",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
     "package": "ncc build --source-map --license licenses.txt",
     "test": "jest",
@@ -37,7 +37,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
-    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
     "@vercel/ncc": "^0.36.1",
     "eslint": "^8.56.0",
     "eslint-plugin-github": "^4.9.2",
