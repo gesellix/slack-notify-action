@@ -1,7 +1,12 @@
 import * as core from '@actions/core'
 import {context} from '@actions/github'
 import {MrkdwnElement} from '@slack/types'
-import {ChatPostMessageArguments, ErrorCode, WebClient} from '@slack/web-api'
+import {
+  ChatPostMessageArguments,
+  ErrorCode,
+  WebClient,
+  WebClientOptions
+} from '@slack/web-api'
 import * as github from './github'
 import {
   CodedError,
@@ -170,7 +175,12 @@ export class Slack {
     token: string,
     payload: ChatPostMessageArguments
   ): Promise<void> {
-    const web = new WebClient(token)
+    const options: WebClientOptions = {}
+    if (process.env.SLACK_API_URL) {
+      core.warning(`Using custom Slack api url: ${process.env.SLACK_API_URL}`)
+      options.slackApiUrl = process.env.SLACK_API_URL
+    }
+    const web = new WebClient(token, options)
     try {
       const result = await web.chat.postMessage(payload)
       core.info(`Message sent successfully ${result.ts}`)
