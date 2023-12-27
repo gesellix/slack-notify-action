@@ -24,3 +24,4 @@ jobs:
           type: success
           job_name: test-ci
           url: http://localhost/_test_
+          slack_token: _test-only_
