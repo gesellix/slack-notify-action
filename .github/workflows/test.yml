@@ -22,6 +22,7 @@ jobs:
       - uses: ./
         with:
           type: success
-          job_name: test-ci
-          url: http://localhost/_test_
-          slack_token: _test-only_
+          job_name: _test-job_
+          url: http://localhost/_test-url_
+          slack_token: _test-token_
+          slack_channel: _test-channel_
